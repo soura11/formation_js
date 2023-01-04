@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="assets/css/dom.css">
+</head>
+<body>
+    <p id="rouge" class="noir">Ceci est un paragraphe de classe rouge</p>
+    <p class="vert">Ceci est un paragraphe de classe vert</p>
+    <p class="noir" name="p3">Ceci est un paragraphe de classe noir</p>
+    <div class="code">Ce texte est affiché dans une balise div de classe code</div>
+    <div>Ce texte est affiché dans une balise div sans classe</div>
+    <div class="exemple">Ce texte est affiché dans une balise div de classe exemple</div>
+    Une liste UL
+    <ul>
+        <li>Premier</li>
+        <li>Deuxième</li>
+        <li>Troisième</li>
+    </ul>
+    Une liste OL
+    <ol class="liste">
+        <li>Premier</li>
+        <li>Deuxième</li>
+        <li>Troisième</li>
+    </ol>
+
+    <form action="" method="post" onSubmit="add();return false;">
+        <table>
+            <tr>
+                <td><label for="nbr1">Entrez nbr1 *:</label></td>
+                <td><input type="text" id="nbr1" name="nbr1"></td>
+            </tr>
+            <tr>
+                <td><label for="nbr2">Entrez nbr2 *:</label></td>
+                <td><input type="text" id="nbr2" name="nbr2"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Envoyer"></td>
+                <td><input type="reset" value="Annuler"></td>
+            </tr>
+        </table>
+    </form>
+    <p id="result"></p>
+    <button onclick="change()">Change</button>
+    <script src="assets/js/dom.js"></script>
+</body>
+</html>

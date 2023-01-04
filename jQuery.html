@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        .c1{
+            background-color:blue;
+            color:white;
+        }
+    </style>
+</head>
+<body onload="addClassC1();">
+    <div>
+        <h1>hello div1</h1>
+    </div>
+    <div>
+        <h1>hello div2</h1>
+    </div>
+    <div>
+        <h1>hello div3</h1>
+    </div>
+    <button onclick="addClassC1()">Hello</button>   
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script>
+        // récupérer tous les div du DOM puis les cacher
+        // $("div").hide();
+
+        // Créer un <h1> et l'ajouter à la fin du body
+        //preprendTo() -> pour ajouter au debut
+        $("<h1>Au revoir<h1/>").appendTo("body");
+
+        // JS
+        // function addClassC1() {
+        //     var divs = document.getElementsByTagName("div");
+        //     for (var i = 0; i < divs.length; i++) {
+        //         var div = divs[i];
+        //         div.setAttribute("class", "c1");
+        //     }
+        // }
+
+        // // JQuery
+        function addClassC1() {
+            $("div").addClass("c1");
+
+
+            $("div") // selection de toutes les balises div
+                .show() // rendre tous les objets visibles
+                .addClass("c1") // ajouter la classe c1
+                .html("Hello jQuery");
+
+            // $("div").fadeOut("normal");
+            $("div").fadeTo("normal", 0.5);
+
+            console.log($("*"));
+            console.log($("div").length);
+            console.log($("Hello").val);
+        }
+    </script>
+</body>
+</html>
